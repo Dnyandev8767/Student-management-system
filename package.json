@@ -1,0 +1,16 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Modern Student Management System SPA built with Vanilla JS, CSS3, and Vite by Dnyandev",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.3.2"
+  },
+  "author": "Dnyandev"
+}

@@ -1,108 +1,120 @@
-# 🎓 Student Management System
+# 🎓 EduPulse - Student Management System
 
-A clean, modern, and fully functional **Student Management System** web application developed by **Dnyandev** as a college academic mini-project.
+A modern, high-performance **Student Management System** dashboard built with **HTML5, CSS3, Vanilla JavaScript (ES6+)**, and powered by **Vite**.
 
-Built entirely using **Vanilla Web Technologies**:
-- **HTML5** (Semantic layout and accessible modal dialogs)
-- **CSS3** (Custom properties/variables, Flexbox, CSS Grid, Dark Mode)
-- **Modern JavaScript (ES6+)** (DOM Manipulation, State Management, and LocalStorage)
+Designed and developed by **Dnyandev** as an academic showcase demonstrating modern frontend architecture, client-side Single Page Application (SPA) routing, and responsive dashboard UI without heavy frameworks.
 
----
-
-## 👨‍💻 Developer Information
-- **Project Name:** Student Management System
-- **Developer:** Dnyandev
-- **Project Type:** College Mini / Academic Project
-- **Architecture:** Client-Side Single Page Application (SPA)
-- **Data Storage:** Browser Web Storage API (`localStorage`)
+![Vite](https://img.shields.io/badge/Vite-8.x_Bundler-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![SPA Architecture](https://img.shields.io/badge/Architecture-Single_Page_App-4f46e5?style=for-the-badge)
+![JavaScript ES6+](https://img.shields.io/badge/JavaScript-ES6+_Vanilla-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-Variables_&_Dark_Mode-1572B6?style=for-the-badge&logo=css3)
 
 ---
 
 ## 🌟 Key Features
 
-1. **Dashboard KPI Analytics:**
-   - **Total Students** enrolled.
-   - **Active Enrolled** count.
-   - **Distinct Departments** counter.
-   - **Average Institutional CGPA** calculated dynamically.
+1. **⚡ Single Page Application (SPA) Navigation:**
+   - Instant client-side routing between `#dashboard` and `#students` with zero page reloads or flickers.
+   - Preserves form input states, search filters, and scroll positions across navigation.
 
-2. **Complete CRUD Operations:**
-   - **Create (Add):** Add new students with field-level validation (unique roll number check, email format, 10-digit phone, CGPA 0–10).
-   - **Read (View):** Interactive table directory displaying student avatar initials, department, academic year, color-coded CGPA tag, and status badge. Detailed Profile Card modal with one-click **Print Profile** option.
-   - **Update (Edit):** In-place editing of student details.
-   - **Delete:** Safe deletion with confirmation modal dialog and feedback toast.
+2. **📊 Live KPI Analytics Cards:**
+   - **Total Enrolled:** Instant count of all active and enrolled students.
+   - **Average GPA:** Dynamically calculated grade point average.
+   - **Active Rate:** Percentage of students in active standing.
+   - **Academic At-Risk:** Highlights students requiring academic intervention (GPA < 3.0).
 
-3. **Live Search & Multi-Criteria Filtering:**
-   - Instant search as you type across Student Name, Roll Number, and Email.
-   - Department filter dropdown (Computer Science, IT, AI & Data Science, Mechanical, Electrical, Civil).
-   - Enrollment status filter (Active, Inactive, Graduated).
-   - One-click Reset Filters button.
+3. **🏢 Department Analytics & Distribution:**
+   - Visual distribution bar progress indicators across Computer Science, AI, Electrical, Mechanical, and Business Administration.
+   - Expandable breakdown details showing enrollment counts per department.
 
-4. **Data Portability:**
-   - **Export to CSV:** Export the student roster into a formatted `.csv` spreadsheet with a single click.
+4. **👥 Student Records Directory:**
+   - Dual viewing modes: **Data Table View** (dense list) and **Grid Cards View** (visual profiles).
+   - Multi-field real-time instant search (`/` keyboard shortcut to focus search).
+   - Filters by Department, Status (Active/Probation/Graduated), Semester, and multi-criteria sorting.
+   - Batch selection with bulk deletion safety confirmation.
 
-5. **Theme Support (Dark / Light Mode):**
-   - Toggle between sleek Dark mode and clean Light mode.
-   - Preference is saved automatically in `localStorage`.
+5. **📝 Full CRUD Operations:**
+   - **Create:** Modal registration form with client-side validation (unique roll number, email, 10-digit phone, GPA range).
+   - **Read:** Comprehensive Student Profile Dossier with attendance meter, academic standing, and print utility.
+   - **Update:** Pre-populated edit modal with instant DOM updates.
+   - **Delete with Undo:** Safe confirmation dialog with 5-second reversible toast notification.
 
-6. **Offline Data Persistence:**
-   - All student records are saved locally in the browser (`localStorage`), so changes persist even after refreshing the page or restarting the browser.
+6. **🎨 Modern UX & Design Aesthetics:**
+   - Curated typography (*Plus Jakarta Sans* & *JetBrains Mono*).
+   - Dark & Light mode toggle with smooth CSS variable transitions, persisted in `localStorage`.
+   - CSV export feature enabling instant Excel/spreadsheet reporting without a backend.
+   - Pre-loaded academic demo dataset for quick testing and demonstrations.
 
 ---
 
-## 🚀 How to Run the Project
+## 🚀 Getting Started
 
-### Option 1: Direct in Browser
-Simply double-click [`index.html`](file:///home/dnyandevd/Desktop/Student%20Management%20System%20Project/index.html) or open it with any web browser (Google Chrome, Firefox, Edge, Safari).
+### Prerequisites:
+Make sure you have [Node.js](https://nodejs.org/) (v18+) installed.
 
-### Option 2: Using Local Python Server (Recommended)
-Open your terminal in this project folder and run:
-```bash
-python3 -m http.server 3000
-```
-Then visit:
-```
-http://localhost:3000
-```
+### Installation & Run:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Dnyandev8767/Student-management-system.git
+   cd Student-management-system
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the Vite development server:
+   ```bash
+   npm run dev
+   ```
+   Open **`http://localhost:3000`** in your browser.
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+   Generates optimized, minified bundles in the `dist/` directory.
 
 ---
 
 ## 📂 Project Structure
 
 ```
-Student Management System Project/
-├── index.html       # Clean semantic HTML5 dashboard layout & dialogs
-├── style.css        # Modern CSS3 design tokens, variables, & dark mode
-├── app.js           # Well-commented ES6+ JavaScript handling CRUD & logic
-└── README.md        # Project guide & Viva interview preparation sheet
+Student-management-system/
+├── index.html       # Clean semantic HTML5 dashboard shell, modals, and templates
+├── style.css        # Modern CSS design system, variables, animations & dark mode
+├── app.js           # Client-side SPA router, state management, and CRUD controllers
+├── vite.config.js   # Fast Vite dev server & production bundler configuration
+├── package.json     # Project metadata and build scripts
+└── README.md        # Comprehensive documentation & Viva preparation guide
 ```
 
 ---
 
 ## 🎓 College Viva & Examiner Q&A Guide
 
-Prepare for your college project viva with these frequently asked questions:
+### Q1: What technologies are used in this project?
+> **Answer:** "The core project is built using native **HTML5**, **CSS3 (with CSS Custom Properties and Flexbox/Grid)**, and **Vanilla JavaScript (ES6+ Modules)**. We use **Vite** as our next-generation build tool and local development server for fast Hot Module Replacement (HMR) and optimized Rollup bundling."
 
-### Q1: What technologies did you use in this project?
-> **Answer:** "I used core vanilla frontend technologies — **HTML5** for structure, **CSS3** with CSS variables and flex/grid layout for responsive styling, and **Vanilla JavaScript (ES6+)** for application logic and DOM manipulation. No heavy external frameworks or libraries were needed."
+### Q2: How does Single Page Application (SPA) routing work in this project?
+> **Answer:** "We implemented hash-based client-side routing. Navigation links use URL hashes like `#dashboard` and `#students`. An event listener on `window.addEventListener('hashchange', ...)` intercepts URL changes and toggles the active view by adding/removing the `.active` CSS class, switching screens in under 10ms with zero server requests or page reloads."
 
-### Q2: Where is the student data stored? Does it have a backend database?
-> **Answer:** "For this project, data is stored client-side using the HTML5 **Web Storage API (`localStorage`)**. When the user adds, edits, or deletes a student, the JavaScript array is converted to JSON string using `JSON.stringify()` and saved in `localStorage`. When the app loads, `JSON.parse()` retrieves the records, ensuring data persists across page refreshes."
+### Q3: Where is the student data stored? Does it require a backend database?
+> **Answer:** "Data is stored on the client side using the **Browser Web Storage API (`localStorage`)**. When records are created, edited, or deleted, JavaScript serializes the array using `JSON.stringify()` and writes to `localStorage`. When the app loads, `JSON.parse()` restores the data, providing persistence without needing an external database."
 
-### Q3: How did you implement real-time search and filtering?
-> **Answer:** "I used the native JavaScript `.filter()` array method. An `input` event listener is attached to the search input. As the user types, the callback filters the student records by checking `name`, `rollNo`, and `email` using `.includes()`, combined with the selected department and status dropdowns, and re-renders the table."
+### Q4: How is the Deletion and 'Undo' feature implemented?
+> **Answer:** "When a user deletes a student, the student object is spliced from the active array and stored in temporary closure memory. A floating toast notification with an 'Undo' button appears for 5 seconds. If the user clicks 'Undo', the student object is restored back to the array and `localStorage` without data loss."
 
-### Q4: How does the Edit feature work?
-> **Answer:** "When the user clicks the edit button (✏️), the student's unique ID is passed to `openEditModal(id)`. The function uses JavaScript's `.find()` method to locate the student object and populates the form input fields. When submitted, the index is found with `.findIndex()`, the object is updated, saved to `localStorage`, and the table re-renders."
-
-### Q5: How is Dark Mode implemented?
-> **Answer:** "Dark Mode is implemented using **CSS Custom Properties (Variables)** on the `:root` and `[data-theme='dark']` selector. In JavaScript, toggling the theme simply switches the `data-theme` attribute on the root `<html>` element and saves the state in `localStorage`."
-
-### Q6: How does the CSV export feature work without a backend?
-> **Answer:** "JavaScript generates a comma-separated string containing headers and student row values. Then it creates a `Blob` object with MIME type `text/csv`, creates a temporary object URL via `URL.createObjectURL()`, and triggers a programmatically clicked download link."
+### Q5: If asked: How would this architecture map to React (JSX, Components, Props, State)?
+> **Answer:** 
+> - **JSX:** Instead of writing raw HTML strings, JSX allows writing declarative XML tags directly in JavaScript (`<div className="card">{student.name}</div>`).
+> - **Components:** The monolithic layout is divided into reusable functions like `Sidebar`, `Header`, `KpiCards`, `StudentDirectory`, and `Modals`.
+> - **Props:** Data passed downwards from Parent (`App`) to Child (`<KpiCards students={students} />`), which are read-only.
+> - **State:** Internal component memory managed with `useState`. When state updates (`setStudents`), React automatically calculates virtual DOM diffs and re-renders only the changed UI.
 
 ---
 
-## 📄 License
-Academic Mini Project created by **Dnyandev**. Free to use, adapt, and learn from.
-# Student-management-system
+## 👨‍💻 Author
+Developed with ❤️ by **Dnyandev**  
+GitHub: [@Dnyandev8767](https://github.com/Dnyandev8767)
